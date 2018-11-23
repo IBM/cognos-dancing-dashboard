@@ -42,7 +42,7 @@ Use the ``Deploy to IBM Cloud`` button **OR** create the services and run locall
 1. Press the above ``Deploy to IBM Cloud`` button and then click on ``Deploy``.
 
 <!--optional step-->
-2. In Toolchains, click on Delivery Pipeline to watch while the app is deployed. Once deployed, the app can be viewed by clicking 'View app'.
+2. In ``Toolchains``, click on ``Delivery Pipeline`` to watch while the app is deployed. Once deployed, the app can be viewed by clicking View app``.
 ![](doc/source/images/toolchain-pipeline.png)
 
 <!--update with service names from manifest.yml-->
@@ -87,11 +87,11 @@ Create the following services:
 
 ### 3. Import the Conversation workspace
 
-Launch the **Watson Conversation** tool. Use the **import** icon button on the right
+Launch the ``Watson Conversation`` tool. Use the ``import`` icon button on the right
 
 Find the local version of [`data/conversation/workspaces/banking.json`](data/conversation/workspaces/banking.json) and select
-**Import**. Find the **Workspace ID** by clicking on the context menu of the new
-workspace and select **View details**. Save this ID for later.
+``Import``. Find the ``Workspace ID`` by clicking on the context menu of the new
+workspace and select ``View details``. Save this ID for later.
 
 *Optionally*, to view the conversation dialog select the workspace and choose the
 **Dialog** tab, here's a snippet of the dialog:
@@ -100,12 +100,12 @@ workspace and select **View details**. Save this ID for later.
 
 ### 4. Load the Discovery documents
 
-Launch the **Watson Discovery** tool. Create a **new data collection**
+Launch the ``Watson Discovery`` tool. Create a ``new data collection``
 and give the data collection a unique name.
 
-> Save the **environment_id** and **collection_id** for your `.env` file in the next step.
+> Save the ``environment_id`` and ``collection_id`` for your `.env` file in the next step.
 
-Under `Add data to this collection` use `Drag and drop your documents here or browse from computer` to seed the content with the five documents in `data/discovery/docs`.
+Under ``Add data to this collection`` use ``Drag and drop your documents here or browse from computer`` to seed the content with the five documents in `data/discovery/docs`.
 
 ### 5. Configure credentials
 
@@ -175,9 +175,9 @@ TONE_ANALYZER_PASSWORD=<add_tone_analyzer_password>
 
   > This is common during the first run. The app tries to start before the Discovery
 environment is fully created. Allow a minute or two to pass. The environment should
-be usable on restart. If you used `Deploy to IBM Cloud` the restart should be automatic.
+be usable on restart. If you used ``Deploy to IBM Cloud`` the restart should be automatic.
 
-* Error: Only one free environent is allowed per organization
+* Error: Only one free environment is allowed per organization
 
   > To work with a free trial, a small free Discovery environment is created. If you already have
 a Discovery environment, this will fail. If you are not using Discovery, check for an old
