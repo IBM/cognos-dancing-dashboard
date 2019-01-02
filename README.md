@@ -1,190 +1,161 @@
-## ** work in progress **
-# cognos-dancing-dashboard
 
-In this Code Pattern, we will Build a Cognos add-on to consume highly volatile streaming data, a dancing dashboard. 
-[Explain briefly how things work]. [Give acknowledgements to others if necessary]
+# Live streaming of Automotive devices data using Custom Widgets within Cognos dashboard
+
+In this Code Pattern, we will build a Cognos add-on to consume highly volatile streaming data, a dancing dashboard. 
+The real time Dashboard will be able to display mix of data (volatile and non-volatile) can be shown on a single dashboard. Volatile data is extracted from external websites and in other words we are trying to build a Cognos add-on to consume streaming(Highly volatile )data like stock ticker or data from SCADA or IOT platform broadcast data. 
+The idea is to build a dancing chart that captures volatile data and incrementally updates itself.
+
+With the latest feature of Cognos 11.x Extensions, you now have the ability to add and remove elements in the IBM Cognos Analytics user interface for a perspective. An extension is a zip file that contains spec.json and optional images and js folders.
+
 
 When the reader has completed this Code Pattern, they will understand how to:
 
-* [goal 1]
-* [goal 2]
-* [goal 3]
-* [goal 4]
+* Build Cognos Custom Widgets
+* Integrate Java Script built Extension within Cognos Dashboard
+* Display mix of Historical and Live Streaming IoT data in Cognos Dashboard
+* Interact with widgets within the same Cognos Dashboard
 
-<!--add an image in this path-->
-![](doc/source/images/architecture.png)
-
-<!--Optionally, add flow steps based on the architecture diagram-->
 ## Flow
 
-1. Step 1.
-2. Step 2.
-3. Step 3.
-4. Step 4.
-5. Step 5.
+![CDB_Cognos](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/DD_Flow.jpg)
+
+1. Develop the code(includes spec.json, js, css, Images) to build Cognos Custom Widget(Extensions)
+2. Bundle the code as a zip file.
+3. Upload the zipped files into Cognos using Extensions.
+4. Use the custom widget into Cognos Dashboard.
+ 
+
 
 <!--Optionally, update this section when the video is created-->
 # Watch the Video
 
 [![](http://img.youtube.com/vi/Jxi7U7VOMYg/0.jpg)](https://www.youtube.com/watch?v=Jxi7U7VOMYg)
 
+## Pre-requisites
+
+* Cognos server - Have on-prim or SaaS offering of Cognos with `admin access`.
+   > Note: Cognos version should be over 11.0.05.
+   
+
 # Steps
 
-Use the ``Deploy to IBM Cloud`` button **OR** create the services and run locally.
+1. [Get the code](#1-get-the-code)
+2. [Upload the code to Cognos BI server](#2-upload-the-code-to-cognos-bi-server)
+3. [Create a Dashboard to consume the Custom Widget](#3-create-a-dashboard-to-consume-the-custom-widget)
+4. [Run the Dashboard](#4-run-the-dashboard)
+5. [Analyze the Dashboard](#5-analyze-the-dashboard)
 
-<!--Optionally, add a deploy to ibm cloud button-->
 
-## Deploy to IBM Cloud
+## 1. Get the code
 
-<!--Update the repo and tracking id-->
-[![Deploy to IBM Cloud](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM/watson-banking-chatbot.git)
+ - Clone the repo using the below command.
+   ```
+   git clone https://github.com/IBM/cognos-dancing-dashboard.git
+   ```
+   
+ - In this repository, custom widget code is available at `./custom-widget-code`. Dowload the `CognosCustomWidget.zip` to your machine.
+ 
+ -  The contents of zip file are as follows and we are providing as zip file(or bundled) to upload to Cognos as Custom widgets.
+ 
+ ![Download_Code_Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/code.jpg)
+ 
 
-1. Press the above ``Deploy to IBM Cloud`` button and then click on ``Deploy``.
 
-<!--optional step-->
-2. In ``Toolchains``, click on ``Delivery Pipeline`` to watch while the app is deployed. Once deployed, the app can be viewed by clicking View app``.
-![](doc/source/images/toolchain-pipeline.png)
+## 2. Upload the code to Cognos BI server
 
-<!--update with service names from manifest.yml-->
-3. To see the app and services created and configured for this Code Pattern, use the IBM Cloud dashboard. The app is named `watson-banking-chatbot` with a unique suffix. The following services are created and easily identified by the `wbc-` prefix:
-    * `wbc-conversation-service`
-    * `wbc-discovery-service`
-    * `wbc-natural-language-understanding-service`
-    * `wbc-tone-analyzer-service`
+- Launch Cognos BI server from the browser(Firefox is preferred). Use the url as per your Cognos Instance. 
 
-## Run locally
-
-> NOTE: These steps are only needed when running locally instead of using the ``Deploy to IBM Cloud`` button.
-
-<!-- there are MANY updates necessary here, just screenshots where appropriate -->
-
-1. [Clone the repo](#1-clone-the-repo)
-2. [Create Watson services with IBM Cloud](#2-create-watson-services-with-ibm-cloud)
-3. [Import the Conversation workspace](#3-import-the-conversation-workspace)
-4. [Load the Discovery documents](#4-load-the-discovery-documents)
-5. [Configure credentials](#5-configure-credentials)
-5. [Run the application](#6-run-the-application)
-
-### 1. Clone the repo
-
-Clone the `watson-banking-chatbot` locally. In a terminal, run:
-
+Sample URL as follows: 
 ```
-$ git clone https://github.com/IBM/watson-banking-chatbot
+http://IP(or)localhost:port_number/bi/?perspective=home
 ```
 
-We’ll be using the file [`data/conversation/workspaces/banking.json`](data/conversation/workspaces/banking.json) and the folder
-[`data/conversation/workspaces/`](data/conversation/workspaces/)
+![LaunchCognos](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/LaunchCognos.jpg)
 
-### 2. Create Watson services with IBM Cloud
+- Under Cognos BI web browser, go to the customization option. See below screenshot for details.
 
-Create the following services:
+![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/upload_BI.jpg)
 
-* [**Watson Conversation**](https://console.ng.bluemix.net/catalog/services/conversation)
-* [**Watson Discovery**](https://console.ng.bluemix.net/catalog/services/discovery)
-* [**Watson Tone Analyzer**](https://console.ng.bluemix.net/catalog/services/tone-analyzer)
-* [**Watson Natural Language Understanding**](https://console.ng.bluemix.net/catalog/services/natural-language-understanding)
+-  Under Customization, use the Extension tab and upload the `CognosCustomWidget.zip` file. See below screenshot for details.
 
-### 3. Import the Conversation workspace
+![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/upload_BI1.jpg)
 
-Launch the ``Watson Conversation`` tool. Use the ``import`` icon button on the right
+- You will see a successful upload message.
 
-Find the local version of [`data/conversation/workspaces/banking.json`](data/conversation/workspaces/banking.json) and select
-``Import``. Find the ``Workspace ID`` by clicking on the context menu of the new
-workspace and select ``View details``. Save this ID for later.
+## 3. Create a Dashboard to consume the Custom Widget
 
-*Optionally*, to view the conversation dialog select the workspace and choose the
-**Dialog** tab, here's a snippet of the dialog:
+- Open New Dashboard.
 
-![](doc/source/images/dialog.PNG)
+![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/db1.jpg)
 
-### 4. Load the Discovery documents
+- Select the blank template.
 
-Launch the ``Watson Discovery`` tool. Create a ``new data collection``
-and give the data collection a unique name.
+![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/db2.jpg)
 
-> Save the ``environment_id`` and ``collection_id`` for your `.env` file in the next step.
+- Click on the Newly created Custom Widget Icon.
 
-Under ``Add data to this collection`` use ``Drag and drop your documents here or browse from computer`` to seed the content with the five documents in `data/discovery/docs`.
+![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/cw1.jpg)
 
-### 5. Configure credentials
+- Drag and drop the Custom Widget to the Dashboard pane. See below screenshot for details.
 
-The credentials for IBM Cloud services (Conversation, Discovery, Tone Analyzer and
-Natural Language Understanding), can be found in the ``Services`` menu in IBM Cloud,
-by selecting the ``Service Credentials`` option for each service.
+![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/cw2.jpg)
 
-The other settings for Conversation and Discovery were collected during the
-earlier setup steps (``DISCOVERY_COLLECTION_ID``, ``DISCOVERY_ENVIRONMENT_ID`` and
-``WORKSPACE_ID``).
+- Adjust the dragged Custom widget to fit to the required height and width within the dashboard.
 
-Copy the [`env.sample`](env.sample) to `.env`.
+![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/Adjust_Size.jpg)
 
-```
-$ cp env.sample .env
-```
-Edit the `.env` file with the necessary settings.
+- After adjusting the custom widet would look like below.
 
-#### `env.sample:`
+![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/Adjust_Size1.jpg)
 
-```
-# Replace the credentials here with your own.
-# Rename this file to .env before starting the app.
+- Save the dashboard as 'Live Streaming of Device' under My Folder of Cognos Connection.
 
-# Watson conversation
-CONVERSATION_USERNAME=<add_conversation_username>
-CONVERSATION_PASSWORD=<add_conversation_password>
-WORKSPACE_ID=<add_conversation_workspace>
+![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/Save_Dashboard.jpg)
 
-# Watson Discovery
-DISCOVERY_USERNAME=<add_discovery_username>
-DISCOVERY_PASSWORD=<add_discovery_password>
-DISCOVERY_ENVIRONMENT_ID=<add_discovery_environment>
-DISCOVERY_COLLECTION_ID=<add_discovery_collection>
 
-# Watson Natural Language Understanding
-NATURAL_LANGUAGE_UNDERSTANDING_USERNAME=<add_nlu_username>
-NATURAL_LANGUAGE_UNDERSTANDING_PASSWORD=<add_nlu_password>
+## 4. Run the Dashboard
 
-# Watson Tone Analyzer
-TONE_ANALYZER_USERNAME=<add_tone_analyzer_username>
-TONE_ANALYZER_PASSWORD=<add_tone_analyzer_password>
+- Run the 'Live Streaming of Device' dashboard from the saved location.
+ 
+ ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/RunDashboard.jpg)
 
-# Run locally on a non-default port (default is 3000)
-# PORT=3000
+- You will see the dashboard with a list content which has 'DeviceA' last 24 hours data(Pressure, Temperature and Vibration)
 
-```
+ ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/Dashboard1.jpg)
+ 
+- Click on any attribute (Pressure/Temperature/Vibration) column for live streaming. A pop up will appear to confirm the pressure live chart is going to be displayed. 
+ 
+ ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/Popup.jpg)
+ 
+-  See the below Live streaming of the line chart for pressure. 
 
-### 6. Run the application
+ ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/Pressure.jpg)
+ 
+- Similarly we can click on other metrics like Temperature and Vibration to see the live streaming of the data in the line chart.
 
-1. Install [Node.js](https://nodejs.org/en/) runtime or NPM.
-1. Start the app by running `npm install`, followed by `npm start`.
-1. Use the chatbot at `localhost:3000`.
-> Note: server host can be changed as required in server.js and `PORT` can be set in `.env`.
-
-<!--Add a section that explains to the reader what typical output looks like, include screenshots -->
+ ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/Temperature.jpg)
+ 
+ ## 5. Analyze the Dashboard
+ 
+ The dashboard displays both volatile and non-volatile data. Meaning, the static data is being read from the backend database and the real-time data is being read from the IoT device data through REST API's. Here we are generating the live data using the Random function. This dashboard primarily useful for automobile manufacturing unit plant engineer who would want to monitor the devices at real-time. For example, if any of these metrics(Pressure/Temperatur/Vibration) go beyound thethreshold points then the plant would take a call to bring devices for maintenance. 
+ 
 
 # Sample output
 
-![](doc/source/images/sample_output.png)
+![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images//Sample_Output.png)
 
 <!--Optionally, include any troubleshooting tips (driver issues, etc)-->
 
 # Troubleshooting
 
-* Error: Environment {GUID} is still not active, retry once status is active
+* Error: Invalid File Name. (This error occurs while you are trying to upload the Custom widget Extension under customization)
 
-  > This is common during the first run. The app tries to start before the Discovery
-environment is fully created. Allow a minute or two to pass. The environment should
-be usable on restart. If you used ``Deploy to IBM Cloud`` the restart should be automatic.
+ ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/error1.png)
 
-* Error: Only one free environment is allowed per organization
-
-  > To work with a free trial, a small free Discovery environment is created. If you already have
-a Discovery environment, this will fail. If you are not using Discovery, check for an old
-service thay you may want to delete. Otherwise use the .env DISCOVERY_ENVIRONMENT_ID to tell
-the app which environment you want it to use. A collection will be created in this environment
-using the default configuration.
-
+  > This is common error if the files are not bundled appropriately.
+  
+  
+  
 <!-- keep this -->
 ## License
 
