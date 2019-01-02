@@ -142,7 +142,7 @@ http://IP(or)localhost:port_number/bi/?perspective=home
 
 # Sample output
 
-![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images//Sample_Output.png)
+![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images//Sample_Output.jpg)
 
 <!--Optionally, include any troubleshooting tips (driver issues, etc)-->
 
