@@ -40,7 +40,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 # Steps
 
 1. [Get the code](#1-get-the-code)
-2. [Upload the code to Cognos BI server](#2-upload-the-code-to-cognos-bi-server)
+2. [Upload the zipped files into Cognos using Custom Widgets](#2-upload-the-zipped-files-into-cognos-using-custom-widgets)
 3. [Create a Dashboard to consume the Custom Widget](#3-create-a-dashboard-to-consume-the-custom-widget)
 4. [Run the Dashboard](#4-run-the-dashboard)
 5. [Analyze the Dashboard](#5-analyze-the-dashboard)
@@ -61,7 +61,7 @@ When the reader has completed this Code Pattern, they will understand how to:
  
 
 
-## 2. Upload the code to Cognos BI server
+## 2. Upload the zipped files into Cognos using Custom Widgets
 
 - Launch Cognos BI server from the browser(Firefox is preferred). Use the url as per your Cognos Instance. 
 
