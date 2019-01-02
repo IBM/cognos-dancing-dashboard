@@ -157,9 +157,9 @@ http://IP(or)localhost:port_number/bi/?perspective=home
   
 # Learn More
 
-- [IBM Cognos Custom Widgets(Extensions](https://www.ibm.com/support/knowledgecenter/en/SSEP7J_11.0.0/com.ibm.swg.ba.cognos.ag_manage.doc/c_ag_manage_extensions.html)
+- [IBM Cognos Custom Widgets(Extensions)](https://www.ibm.com/support/knowledgecenter/en/SSEP7J_11.0.0/com.ibm.swg.ba.cognos.ag_manage.doc/c_ag_manage_extensions.html)
 
-- [Adding javascript to cognos](https://www.ibm.com/support/knowledgecenter/en/SSEP7J_11.0.0/com.ibm.swg.ba.cognos.ug_cr_rptstd.doc/t_rpting_add_javascrpt.html)
+
   
 <!-- keep this -->
 ## License
