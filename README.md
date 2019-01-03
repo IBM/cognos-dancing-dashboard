@@ -72,7 +72,7 @@ http://IP(or)localhost:port_number/bi/?perspective=home
 
 ![LaunchCognos](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/LaunchCognos.jpg)
 
-- Under Cognos BI web browser, go to the Customization option. See below screenshot for details.
+- Under Cognos BI web browser, go to the `Manage -> Customization` option and click on upload icon. See below screenshot for details.
 
 ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/upload_BI.jpg)
 
