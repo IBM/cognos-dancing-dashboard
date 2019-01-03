@@ -80,7 +80,7 @@ http://IP(or)localhost:port_number/bi/?perspective=home
 
 ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/uploadBI1.jpg)
 
-- On success, upload message will be displayed as follows.
+- On success, `File was uploaded successfully` message will be displayed.
 
 ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/upload_Success.jpg)
 
