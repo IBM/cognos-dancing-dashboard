@@ -128,7 +128,11 @@ See below screen shot for details.
 ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/Adjust_Size1.jpg)
 
 
-- Save the dashboard as 'Live Streaming of Device' under `My Folder` of Cognos Connection.
+- Save the dashboard as 
+
+```
+`Live Streaming of Device` under `My Content` of Cognos Connection.
+```
 
 ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/Save_Dashboard.jpg)
 
