@@ -8,6 +8,12 @@ The idea is to build a dancing chart that captures volatile data and incremental
 With the latest feature of Cognos 11.x Extensions, you now have the ability to add and remove elements in the IBM Cognos Analytics user interface for a perspective. An extension is a zip file that contains spec.json and optional images and js folders.
 
 
+You can create extensions that add functions to the IBM® Cognos® Analytics user interface. For example, you can add buttons that, when clicked, open a particular report or dashboard. You can also remove default buttons from the user interface.
+
+To create and upload extensions, you must have Portal Administrator or System Administrator privileges.
+
+Extensions are defined in a spec.json file that is contained in the root of the extension .zip file. Depending on the extension, there can also be folders that include images, HTML files, and JavaScript files. The structure and contents of the spec.json file is described in spec.json description. The high-level structure of the file is show here.
+
 When the reader has completed this Code Pattern, they will understand how to:
 
 * Build Cognos Custom Widgets
@@ -33,8 +39,10 @@ When the reader has completed this Code Pattern, they will understand how to:
 
 ## Pre-requisites
 
-* Cognos server - Have on-prim or SaaS offering of Cognos with `admin access`.
+* Cognos server - Have on-prim or SaaS offering of Cognos.
    > Note: Cognos version should be over 11.0.05.
+
+* To create and upload extensions(Custom Widgets), you must have Cognos Portal Administrator or System Administrator privileges.
    
 
 # Steps
