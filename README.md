@@ -72,13 +72,13 @@ http://IP(or)localhost:port_number/bi/?perspective=home
 
 ![LaunchCognos](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/LaunchCognos.jpg)
 
-- Under Cognos BI web browser, go to the `Manage -> Customization` option and click on upload icon. See below screenshot for details.
+- Under Cognos BI web browser, go to the `Manage -> Customization` option. See below screenshot for details.
 
 ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/upload_BI.jpg)
 
--  Under Customization, use the Extension tab and upload the `CognosCustomWidget.zip` file. See below screenshot for details.
+-  Under Customization, use the Extension tab and click on upload icon to upload the `CognosCustomWidget.zip` file. See below screenshot for details.
 
-![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/upload_BI1.jpg)
+![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/uploadBI1.jpg)
 
 - You will see a successful upload message.
 
