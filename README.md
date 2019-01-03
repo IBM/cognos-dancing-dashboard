@@ -63,6 +63,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 
 ## 2. Upload the zipped files into Cognos using Custom Widgets
 
+
 - Launch Cognos BI server from the browser (Firefox is preferred). Use the url as per your Cognos Instance. 
 
 Sample URL as follows: 
@@ -72,21 +73,27 @@ http://IP(or)localhost:port_number/bi/?perspective=home
 
 ![LaunchCognos](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/LaunchCognos.jpg)
 
+
 - Under Cognos BI web browser, go to the `Manage -> Customization` option. See below screenshot for details.
 
 ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/upload_BI.jpg)
+
 
 -  Under Customization, use the Extensions tab and click on upload icon to upload the `CognosCustomWidget.zip` file. See below screenshot for details.
 
 ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/uploadBI1.jpg)
 
+
 - On success, `File was uploaded successfully` message will be displayed.
 
 ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/upload_Success.jpg)
 
-- A new icon gets created for this newly created Custom Widget. See below screen shot for details.
+
+- A new icon gets created for this newly created Custom Widget on successful upload of the Custom Widget zip file. 
+See below screen shot for details.
 
 ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/cw_icon.jpg)
+
 
 
 ## 3. Create a Dashboard to use the Custom Widget
@@ -95,25 +102,31 @@ http://IP(or)localhost:port_number/bi/?perspective=home
 
 ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/db1.jpg)
 
+
 - Select the blank template.
 
 ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/db2.jpg)
+
 
 - Click on the Newly created Custom Widget Icon.
 
 ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/cw1.jpg)
 
+
 - Drag and drop the Custom Widget to the Dashboard pane. See below screenshot for details.
 
 ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/cw2.jpg)
+
 
 - Adjust the dragged Custom widget to fit to the required height and width within the dashboard.
 
 ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/Adjust_Size.jpg)
 
+
 - After adjusting the custom widget would look like below.
 
 ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/Adjust_Size1.jpg)
+
 
 - Save the dashboard as 'Live Streaming of Device' under `My Folder` of Cognos Connection.
 
