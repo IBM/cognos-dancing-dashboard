@@ -84,6 +84,10 @@ http://IP(or)localhost:port_number/bi/?perspective=home
 
 ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/upload_Success.jpg)
 
+- A new icon gets created for this newly created Custom Widget. See below screen shot for details.
+
+![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/cw_icon.jpg)
+
 
 ## 3. Create a Dashboard to use the Custom Widget
 
