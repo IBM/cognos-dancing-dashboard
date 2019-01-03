@@ -41,7 +41,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 
 1. [Get the code](#1-get-the-code)
 2. [Upload the zipped files into Cognos using Custom Widgets](#2-upload-the-zipped-files-into-cognos-using-custom-widgets)
-3. [Create a Dashboard to consume the Custom Widget](#3-create-a-dashboard-to-consume-the-custom-widget)
+3. [Create a Dashboard to use the Custom Widget](#3-create-a-dashboard-to-use-the-custom-widget)
 4. [Run the Dashboard](#4-run-the-dashboard)
 5. [Analyze the Dashboard](#5-analyze-the-dashboard)
 
@@ -85,9 +85,9 @@ http://IP(or)localhost:port_number/bi/?perspective=home
 ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/upload_Success.jpg)
 
 
-## 3. Create a Dashboard to consume the Custom Widget
+## 3. Create a Dashboard to use the Custom Widget
 
-- Open New Dashboard.
+- Launch Cognos and create a new dashboard
 
 ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/db1.jpg)
 
