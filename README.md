@@ -1,6 +1,22 @@
 
 # Live streaming of Automotive devices data using Custom Widgets within Cognos dashboard
 
+It brings a lot of excitement with the all-new Cognos Analytics(CA11.1) driven by AI. For a great reason: this version of CA11.1 offers various new features powered by augmented intelligence(AI). From data prep and discovery to data visualization and collaboration, AI drives IBM Cognos Analytics.
+
+Traditional business intelligence (BI) solutions have no hope of making sense of the volume, variety and velocity of data being created. Powered by an ever-growing set of augmented intelligence (AI) features, Cognos Analytics has been reconceived for the needs of today’s organizations and users.
+
+The key challenge is to give each and every user — be it data scientist, business analyst or non-specialist — more power to perform relevant analysis in a way that ties back to organizational objectives. Cognos Analytics accelerates this process, shortening each user’s journey from simple to sophisticated analytics, ultimately allowing both business users and IT pros to harness data to explore the unknown, identify novel relationships in data, get a deeper understanding of outcomes and challenge the status quo.
+
+One of the key requirements in the Automobile manufacturing unit is to monitor the devices and taking an accurate decision of bringing them for planned or un-planned maintenance. From the traditional Cognos analytics(previous to CA11.1), it was not possible to show the Volatile and the non-volatile data in a single dashboard. Meaning, the real-time data display wan not possible directly. Now with the latest features of CA11, Custom widgets are used to built and through Extensions we can build 
+those use them in Cognos Dashboards.
+
+Extensions are defined in a spec.json file that is contained in the root of the extension .zip file. Depending on the extension, there can also be folders that include images, HTML files, and JavaScript files. The structure and contents of the spec.json file is described in spec.json description. The high-level structure of the file is show here.
+
+Considering the use case of a Automobile manufacturing units, plant engineer's job is to continuolsy monitor the devices health and keep them in tact. It is quiet a tedious job for him to monitor those devices and take a call to bring the devices down for maintenance. At times there may be scenario where there might be a false alarms of bringing the devices down for maintenance based on the system/model predictions.
+
+For example: When there is a corrective maintencance task, where equipment is repaired or replaced after wear, malfunction or break down. At that moment going for maintenance is fair ask. But, imagine if there is Preventive/Predictive maintenance(where equipment or facilities are inspected, maintained and protected before break down or other problems occur) required based on the previous break down activities, the system/models would have predicted for device to bring down for maintenance, however if you really look at the live metrics of the devices, he would notice that devices health is absolutely healthy. 
+And the plant engineer would not go for a unnecessarry(overhead) maintenance.
+
 In this Code Pattern, we will build a Cognos add-on to consume highly volatile streaming data, a dancing dashboard. 
 The real time Dashboard will be able to display mix of data (volatile and non-volatile) can be shown on a single dashboard. Volatile data is extracted from external websites and in other words we are trying to build a Cognos add-on to consume streaming (Highly volatile) data like stock ticker or data from SCADA or IOT platform broadcast data. 
 The idea is to build a dancing chart that captures volatile data and incrementally updates itself.
@@ -10,18 +26,6 @@ With the latest feature of Cognos 11.x Extensions, you now have the ability to a
 
 You can create extensions that add functions to the IBM® Cognos® Analytics user interface. For example, you can add buttons that, when clicked, open a particular report or dashboard. You can also remove default buttons from the user interface.
 
-To create and upload extensions, you must have Portal Administrator or System Administrator privileges.
-
-Extensions are defined in a spec.json file that is contained in the root of the extension .zip file. Depending on the extension, there can also be folders that include images, HTML files, and JavaScript files. The structure and contents of the spec.json file is described in spec.json description. The high-level structure of the file is show here.
-
-**Use case**
-
-In a Automobile manufacturing units, plant engineer's job is to continuolsy monitor the devices health and keep them in tact.
-It is quiet a tedious job for him to monitor those devices and take a call to bring the devices down for maintenance.
-At times there may be scenario where there might be a false alarms of bringing the devices down for maintenance based on the system/model predictions.
-
-For example: When there is a corrective maintencance task, where equipment is repaired or replaced after wear, malfunction or break down. At that moment going for maintenance is fair ask. But, imagine if there is Preventive/Predictive maintenance(where equipment or facilities are inspected, maintained and protected before break down or other problems occur) required based on the previous break down activities, the system/models would have predicted for device to bring down for maintenance, however if you really look at the live metrics of the devices, he would notice that devices health is absolutely healthy. 
-And the plant engineer would not go for a unnecessarry(overhead) maintenance.
 
 This pattern that we developed would give the live-insights of the devices health metrics from Cognos Dashnoard.
 
