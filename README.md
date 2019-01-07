@@ -14,6 +14,22 @@ To create and upload extensions, you must have Portal Administrator or System Ad
 
 Extensions are defined in a spec.json file that is contained in the root of the extension .zip file. Depending on the extension, there can also be folders that include images, HTML files, and JavaScript files. The structure and contents of the spec.json file is described in spec.json description. The high-level structure of the file is show here.
 
+**Use case**
+
+In a Automobile manufacturing units, plant engineer's job is to continuolsy monitor the devices health and keep them in tact.
+It is quiet a tedious job for him to monitor those devices and take a call to bring the devices down for maintenance.
+At times there may be scenario where there might be a false alarms of bringing the devices down for maintenance based on the system/model predictions.
+
+For example: When there is a corrective maintencance task, where equipment is repaired or replaced after wear, malfunction or break down. At that moment going for maintenance is fair ask. But, imagine if there is Preventive/Predictive maintenance(where equipment or facilities are inspected, maintained and protected before break down or other problems occur) required based on the previous break down activities, the system/models would have predicted for device to bring down for maintenance, however if you really look at the live metrics of the devices, he would notice that devices health is absolutely healthy. 
+And the plant engineer would not go for a unnecessarry(overhead) maintenance.
+
+This pattern that we developed would give the live-insights of the devices health metrics from Cognos Dashnoard.
+
+
+Preventive or scheduled maintenance, where equipment or facilities are inspected, maintained and protected before break down or other problems occur.
+Corrective maintenance where equipment is repaired or replaced after wear, malfunction or break down.
+
+
 When the reader has completed this Code Pattern, they will understand how to:
 
 * Build Cognos Custom Widgets
