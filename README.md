@@ -9,7 +9,9 @@ The key challenge is to give each and every user — be it data scientist, busin
 
 One of the key requirements in the Automobile manufacturing unit is to monitor the devices and taking an accurate decision of bringing them for planned or un-planned maintenance. From the traditional Cognos analytics(previous to CA11.1), it was not possible to show the Volatile and the non-volatile data in a single dashboard. Meaning, the real-time data display wan not possible directly. Now with the latest features of CA11, Custom widgets can be built and through Extensions we can use them in Cognos Dashboards.
 
-Extensions are defined in a spec.json file that is contained in the root of the extension .zip file. Depending on the extension, there can also be folders that include images, HTML files, and JavaScript files. The structure and contents of the spec.json file is described in spec.json description. The high-level structure of the file is show here.
+With the latest feature of Cognos 11.x Extensions, you now have the ability to add and remove elements in the IBM Cognos Analytics user interface for a perspective. An extension is a zip file that contains spec.json and optional images and js folders.
+
+You can create extensions that add functions to the IBM® Cognos® Analytics user interface. For example, you can add buttons that, when clicked, open a particular report or dashboard. You can also remove default buttons from the user interface.
 
 Considering the use case of a Automobile manufacturing units, plant engineer's job is to continuolsy monitor the devices health and keep them in tact. It is quiet a tedious job for him to monitor those devices and take a call to bring the devices down for maintenance. At times there may be scenario where there might be a false alarms of bringing the devices down for maintenance based on the system/model predictions.
 
@@ -20,18 +22,7 @@ In this Code Pattern, we will build a Cognos add-on to consume highly volatile s
 The real time Dashboard will be able to display mix of data (volatile and non-volatile) can be shown on a single dashboard. Volatile data is extracted from external websites and in other words we are trying to build a Cognos add-on to consume streaming (Highly volatile) data like stock ticker or data from SCADA or IOT platform broadcast data. 
 The idea is to build a dancing chart that captures volatile data and incrementally updates itself.
 
-With the latest feature of Cognos 11.x Extensions, you now have the ability to add and remove elements in the IBM Cognos Analytics user interface for a perspective. An extension is a zip file that contains spec.json and optional images and js folders.
-
-
-You can create extensions that add functions to the IBM® Cognos® Analytics user interface. For example, you can add buttons that, when clicked, open a particular report or dashboard. You can also remove default buttons from the user interface.
-
-
-This pattern that we developed would give the live-insights of the devices health metrics from Cognos Dashnoard.
-
-
-Preventive or scheduled maintenance, where equipment or facilities are inspected, maintained and protected before break down or other problems occur.
-Corrective maintenance where equipment is repaired or replaced after wear, malfunction or break down.
-
+In simple words, this pattern will demonstrate displaying live-insights of the devices health metrics from Cognos Dashnoard.
 
 When the reader has completed this Code Pattern, they will understand how to:
 
