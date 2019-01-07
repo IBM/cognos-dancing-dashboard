@@ -7,8 +7,7 @@ Traditional business intelligence (BI) solutions have no hope of making sense of
 
 The key challenge is to give each and every user — be it data scientist, business analyst or non-specialist — more power to perform relevant analysis in a way that ties back to organizational objectives. Cognos Analytics accelerates this process, shortening each user’s journey from simple to sophisticated analytics, ultimately allowing both business users and IT pros to harness data to explore the unknown, identify novel relationships in data, get a deeper understanding of outcomes and challenge the status quo.
 
-One of the key requirements in the Automobile manufacturing unit is to monitor the devices and taking an accurate decision of bringing them for planned or un-planned maintenance. From the traditional Cognos analytics(previous to CA11.1), it was not possible to show the Volatile and the non-volatile data in a single dashboard. Meaning, the real-time data display wan not possible directly. Now with the latest features of CA11, Custom widgets are used to built and through Extensions we can build 
-those use them in Cognos Dashboards.
+One of the key requirements in the Automobile manufacturing unit is to monitor the devices and taking an accurate decision of bringing them for planned or un-planned maintenance. From the traditional Cognos analytics(previous to CA11.1), it was not possible to show the Volatile and the non-volatile data in a single dashboard. Meaning, the real-time data display wan not possible directly. Now with the latest features of CA11, Custom widgets can be built and through Extensions we can use them in Cognos Dashboards.
 
 Extensions are defined in a spec.json file that is contained in the root of the extension .zip file. Depending on the extension, there can also be folders that include images, HTML files, and JavaScript files. The structure and contents of the spec.json file is described in spec.json description. The high-level structure of the file is show here.
 
@@ -48,7 +47,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 1. Develop the code (includes spec.json, js, css, Images) to build Cognos Custom Widget (Extensions)
 2. Bundle the code as a zip file.
 3. Upload the zipped files into Cognos using Extensions.
-4. Use the custom widget into Cognos Dashboard.
+4. Use the built custom widget into Cognos Dashboard.
  
 
 
@@ -69,7 +68,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 
 1. [Get the code](#1-get-the-code)
 2. [Upload the zipped files into Cognos using Custom Widgets](#2-upload-the-zipped-files-into-cognos-using-custom-widgets)
-3. [Create a Dashboard to use the Custom Widget](#3-create-a-dashboard-to-use-the-custom-widget)
+3. [Create a Dashboard to use the built Custom Widget](#3-create-a-dashboard-to-use-the-built-custom-widget)
 4. [Run the Dashboard](#4-run-the-dashboard)
 5. [Analyze the Dashboard](#5-analyze-the-dashboard)
 
@@ -124,7 +123,7 @@ See below screen shot for details.
 
 
 
-## 3. Create a Dashboard to use the Custom Widget
+## 3. Create a Dashboard to use the built Custom Widget
 
 - Launch Cognos and create a new dashboard
 
