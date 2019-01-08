@@ -1,17 +1,11 @@
 
 # Live streaming of Automotive devices data using Custom Widgets within Cognos dashboard
 
-It brings a lot of excitement with the all-new Cognos Analytics(CA11.1) driven by AI. For a great reason: this version of CA11.1 offers various new features powered by augmented intelligence(AI). From data prep and discovery to data visualization and collaboration, AI drives IBM Cognos Analytics.
-
-Traditional business intelligence (BI) solutions have no hope of making sense of the volume, variety and velocity of data being created. Powered by an ever-growing set of augmented intelligence (AI) features, Cognos Analytics has been reconceived for the needs of today’s organizations and users.
-
-The key challenge is to give each and every user — be it data scientist, business analyst or non-specialist — more power to perform relevant analysis in a way that ties back to organizational objectives. Cognos Analytics accelerates this process, shortening each user’s journey from simple to sophisticated analytics, ultimately allowing both business users and IT pros to harness data to explore the unknown, identify novel relationships in data, get a deeper understanding of outcomes and challenge the status quo.
+It brings a lot of excitement with the all-new Cognos Analytics(CA11.1) driven by AI. For a great reason: this version of CA11.1 offers various new features powered by augmented intelligence(AI). From data prep and discovery to data visualization and collaboration, AI drives IBM Cognos Analytics. Traditional business intelligence (BI) solutions have no hope of making sense of the volume, variety and velocity of data being created. Powered by an ever-growing set of augmented intelligence (AI) features, Cognos Analytics has been reconceived for the needs of today’s organizations and users.
 
 One of the key requirements in the Automobile manufacturing unit is to monitor the devices and taking an accurate decision of bringing them for planned or un-planned maintenance. From the traditional Cognos analytics(previous to CA11.1), it was not possible to show the Volatile and the non-volatile data in a single dashboard. Meaning, the real-time data display wan not possible directly. Now with the latest features of CA11, Custom widgets can be built and through Extensions we can use them in Cognos Dashboards.
 
-With the latest feature of Cognos 11.x Extensions, you now have the ability to add and remove elements in the IBM Cognos Analytics user interface for a perspective. An extension is a zip file that contains spec.json and optional images and js folders.
-
-You can create extensions that add functions to the IBM® Cognos® Analytics user interface. For example, you can add buttons that, when clicked, open a particular report or dashboard. You can also remove default buttons from the user interface.
+With the latest feature of Cognos 11.x Extensions, you now have the ability to add and remove elements in the IBM Cognos Analytics user interface for a perspective. An extension is a zip file that contains spec.json and optional images and js folders. You can create extensions that add functions to the IBM® Cognos® Analytics user interface. For example, you can add buttons that, when clicked, open a particular report or dashboard. You can also remove default buttons from the user interface.
 
 Considering the use case of a Automobile manufacturing units, plant engineer's job is to continuolsy monitor the devices health and keep them in tact. It is quiet a tedious job for him to monitor those devices and take a call to bring the devices down for maintenance. At times there may be scenario where there might be a false alarms of bringing the devices down for maintenance based on the system/model predictions.
 
