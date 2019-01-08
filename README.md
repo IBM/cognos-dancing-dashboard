@@ -201,6 +201,7 @@ See below screen shot for details.
 
 - [IBM Cognos Custom Widgets(Extensions)](https://www.ibm.com/support/knowledgecenter/en/SSEP7J_11.0.0/com.ibm.swg.ba.cognos.ag_manage.doc/c_ag_manage_extensions.html)
 
+- [How to create Extensions](https://www.youtube.com/watch?v=1yzgM_-Bf-4)
 
   
 <!-- keep this -->
