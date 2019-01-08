@@ -1,9 +1,9 @@
 
 # Live streaming of Automotive devices data using Custom Widgets within Cognos dashboard
 
-It brings a lot of excitement with the all-new Cognos Analytics(CA11.1) driven by AI. For a great reason: this version of CA11.1 offers various new features powered by augmented intelligence(AI). From data prep and discovery to data visualization and collaboration, AI drives IBM Cognos Analytics. Traditional business intelligence (BI) solutions have no hope of making sense of the volume, variety and velocity of data being created. Powered by an ever-growing set of augmented intelligence (AI) features, Cognos Analytics has been reconceived for the needs of today’s organizations and users.
+It brings a lot of excitement with the all-new Cognos Analytics(CA11.1.x) driven by AI. For a great reason: this version of CA11.1 offers various new features powered by augmented intelligence(AI). From data prep and discovery to data visualization and collaboration, AI drives IBM Cognos Analytics. Traditional business intelligence (BI) solutions have no hope of making sense of the volume, variety and velocity of data being created. Powered by an ever-growing set of augmented intelligence (AI) features, Cognos Analytics has been reconceived for the needs of today’s organizations and users.
 
-One of the key requirements in the Automobile manufacturing unit is to monitor the devices and taking an accurate decision of bringing them for planned or un-planned maintenance. From the traditional Cognos analytics(previous to CA11.1), it was not possible to show the Volatile and the non-volatile data in a single dashboard. Meaning, the real-time data display wan not possible directly. Now with the latest features of CA11, Custom widgets can be built and through Extensions we can use them in Cognos Dashboards.
+One of the key challenging task in the Automobile manufacturing unit is to monitor the devices and taking an accurate decision of bringing them for planned or un-planned maintenance. From the traditional Cognos analytics(previous to CA11.1) dashboard, it was `NOT` possible to show the Volatile and the non-volatile data in a single dashboard. Meaning, the real-time data display wan not possible directly. Now with the latest features of CA11.x, Custom widgets can be built and through Extensions we can use them in Cognos Dashboards.
 
 With the latest feature of Cognos 11.x Extensions, you now have the ability to add and remove elements in the IBM Cognos Analytics user interface for a perspective. An extension is a zip file that contains spec.json and optional images and js folders. You can create extensions that add functions to the IBM® Cognos® Analytics user interface. For example, you can add buttons that, when clicked, open a particular report or dashboard. You can also remove default buttons from the user interface.
 
@@ -43,7 +43,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 ## Pre-requisites
 
 * Cognos server - Have on-prim or SaaS offering of Cognos.
-   > Note: Cognos version should be over 11.0.05.
+   > Note: Cognos version should be over 11.0.1.
 
 * To create and upload extensions(Custom Widgets), you must have Cognos Portal Administrator or System Administrator privileges.
    
@@ -172,7 +172,7 @@ See below screen shot for details.
  
  ## 5. Analyze the Dashboard
  
- The dashboard displays both volatile and non-volatile data. Meaning, the static data is being read from the backend database and the real-time data is being read from the IoT device data through REST API's. Here we are generating the live data using the Random function. This dashboard is primarily useful for automobile manufacturing unit plant engineer who would want to monitor the devices at real-time. For example, if any of these metrics (Pressure/Temperatur/Vibration) go beyound the threshold points, then the plant would take a call to bring devices for maintenance. 
+ The dashboard displays both volatile and non-volatile data. Meaning, the static data is being read from the json spec(can also be read from any traditional database but for this pattern we restricted to read from json spec) and the real-time data is being read from the json spec through as random number generator(ideally can be read from IoT device data through REST API's). Here we are generating the live(real-time) data using the Random function from jaca script. This dashboard is primarily useful for automobile manufacturing unit plant engineer who would want to monitor the devices at real-time. For example, if any of these metrics (Pressure/Temperatur/Vibration) go beyound the threshold points, then the plant would take a call to bring devices for maintenance. 
  
 
 # Sample output
