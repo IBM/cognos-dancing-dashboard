@@ -1,15 +1,15 @@
 
 # Live streaming of Automotive devices data using Custom Widgets within Cognos dashboard
 
-It brings a lot of excitement with the all-new Cognos Analytics(CA11.1.x) driven by AI. For a great reason: this version of CA11.1 offers various new features powered by augmented intelligence(AI). From data prep and discovery to data visualization and collaboration, AI drives IBM Cognos Analytics. Traditional business intelligence (BI) solutions have no hope of making sense of the volume, variety and velocity of data being created. Powered by an ever-growing set of augmented intelligence (AI) features, Cognos Analytics has been reconceived for the needs of today’s organizations and users.
+It brings a lot of excitement with the all-new Cognos Analytics (CA11.1.x) driven by AI. For a great reason: this version of CA11.1 offers various new features powered by augmented intelligence (AI). From data prep and discovery to data visualization and collaboration, AI drives IBM Cognos Analytics. Traditional business intelligence (BI) solutions have no hope of making sense of the volume, variety and velocity of data being created. Powered by an ever-growing set of augmented intelligence (AI) features, Cognos Analytics has been reconceived for the needs of today’s organizations and users.
 
-One of the key challenging task in the Automobile manufacturing unit is to monitor the devices and taking an accurate decision of bringing them for planned or un-planned maintenance. From the traditional Cognos analytics(previous to CA11.1) dashboard, it was `NOT` possible to show the Volatile and the non-volatile data in a single dashboard. Meaning, the real-time data display wan not possible directly. Now with the latest features of CA11.x, Custom widgets can be built and through Extensions we can use them in Cognos Dashboards.
+One of the key challenging task in the Automobile manufacturing unit is to monitor the devices and taking an accurate decision of bringing them for planned or un-planned maintenance. From the traditional Cognos analytics (previous to CA11.1) dashboard, it was `NOT` possible to show the Volatile and the non-volatile data in a single dashboard. Meaning, the real-time data display wan not possible directly. Now with the latest features of CA11.x, Custom widgets can be built and through Extensions we can use them in Cognos Dashboards.
 
 With the latest feature of Cognos 11.x Extensions, you now have the ability to add and remove elements in the IBM Cognos Analytics user interface for a perspective. An extension is a zip file that contains spec.json and optional images and js folders. You can create extensions that add functions to the IBM® Cognos® Analytics user interface. For example, you can add buttons that, when clicked, open a particular report or dashboard. You can also remove default buttons from the user interface.
 
 Considering the use case of a Automobile manufacturing units, a plant engineer's job is to continuolsy monitor the devices health and keep them in tact. It is quiet a tedious job for him to monitor constantly those devices and take a call to bring the devices down for maintenance. At times there may be scenario where there might be a false alarms of bringing the devices down for maintenance based on the system/model predictions.
 
-For example: When there is a corrective maintencance task, where equipment is repaired or replaced after wear, malfunction or break down. At that moment going for maintenance is fair ask. But, imagine if there is Preventive/Predictive maintenance(where equipment or facilities are inspected, maintained and protected before break down or other problems occur) required based on the previous break down activities, the system/models would have predicted for device to bring down for maintenance, however if you really look at the live(real-time) metrics of the devices, he would notice that devices health is absolutely fine and in tact and the plant engineer would not go for a unnecessarry(overhead) maintenance. In order to see such live/real-time metrics from the Cognos dashboard, it is not a straight way to build.
+For example: When there is a corrective maintenance task, where equipment is repaired or replaced after wear, malfunction or break down. At that moment going for maintenance is fair ask. But, imagine if there is Preventive/Predictive maintenance (where equipment or facilities are inspected, maintained and protected before break down or other problems occur) required based on the previous break down activities, the system/models would have predicted for device to bring down for maintenance, however if you really look at the live (real-time) metrics of the devices, he would notice that devices health is absolutely fine and intact and the plant engineer would not go for a unnecessarry (overhead) maintenance. In order to see such live/real-time metrics from the Cognos dashboard, it is not a straight way to build.
 
 In this Code Pattern, we will build a Cognos add-on to consume highly volatile streaming data, a dancing dashboard. 
 The real time Dashboard will be able to display mix of data (volatile and non-volatile) can be shown on a single dashboard. Volatile data is extracted from external websites and in other words we are trying to build a Cognos add-on to consume streaming (Highly volatile) data like stock ticker or data from SCADA or IOT platform broadcast data. 
@@ -45,7 +45,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 * Cognos server - Have on-prim or SaaS offering of Cognos.
    > Note: Cognos version should be over 11.0.1.
 
-* To create and upload extensions(Custom Widgets), you must have Cognos Portal Administrator or System Administrator privileges.
+* To create and upload extensions (Custom Widgets), you must have Cognos Portal Administrator or System Administrator privileges.
    
 
 # Steps
@@ -90,7 +90,7 @@ http://IP(or)localhost:port_number/bi/?perspective=home
 ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/upload_BI.jpg)
 
 
--  Under Customization, use the Extensions tab and click on upload icon to upload the `CognosCustomWidget.zip` file. See below screenshot for details.
+-  Under Customization, use the `Extensions` tab and click on upload icon to upload the `CognosCustomWidget.zip` file. See below screenshot for details.
 
 ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/uploadBI1.jpg)
 
@@ -172,7 +172,7 @@ See below screen shot for details.
  
  ## 5. Analyze the Dashboard
  
- The dashboard displays both volatile and non-volatile data. Meaning, the static data is being read from the json spec(can also be read from any traditional database but for this pattern we restricted to read from json spec) and the real-time data is being read from the json spec through a random number generator(ideally can be read from IoT device data through REST API's). Here we are generating the live(real-time) data using the Random function from java script. This dashboard is primarily useful for automobile manufacturing unit plant engineer who would want to monitor the devices at real-time. For example, if any of these metrics or combinations of the metrics (Pressure/Temperatur/Vibration) go beyond the threshold points, then the plant engineer would take a call to bring devices down for maintenance. 
+ The dashboard displays both volatile and non-volatile data. Meaning, the static data is being read from the JSON specification (can also be read from any traditional database but for this pattern we restricted to read from json spec) and the real-time data is being read from the json spec through a random number generator (ideally can be read from IoT device data through REST API's). Here we are generating the live (real-time) data using the Random function from java script. This dashboard is primarily useful for automobile manufacturing unit plant engineer who would want to monitor the devices at real-time. For example, if any of these metrics or combinations of the metrics (Pressure/Temperatur/Vibration) go beyond the threshold points, then the plant engineer would take a call to bring devices down for maintenance. 
  
 
 # Sample output
