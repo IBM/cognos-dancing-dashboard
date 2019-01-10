@@ -1,21 +1,13 @@
 
-# Live streaming of Automotive devices data using Custom Widgets within Cognos dashboard
+# Live streaming of devices/sensor data using custom widgets within Cognos dashboard
 
-It brings a lot of excitement with the all-new Cognos Analytics (CA11.1.x) driven by AI. For a great reason: this version of CA11.1 offers various new features powered by augmented intelligence (AI). From data prep and discovery to data visualization and collaboration, AI drives IBM Cognos Analytics. Traditional business intelligence (BI) solutions have no hope of making sense of the volume, variety and velocity of data being created. Powered by an ever-growing set of augmented intelligence (AI) features, Cognos Analytics has been reconceived for the needs of today’s organizations and users.
+IBM Cognos Analytics integrates reporting, modeling, analysis, dashboards, stories, and event management so that you can understand your organization data, and make effective business decisions. Just take an example in the Automobile manufacturing unit. One of the key challenging task in the Automobile manufacturing unit is to monitor the devices and taking an accurate decision of bringing them for planned or un-planned maintenance. From the traditional Cognos analytics (previous to 11.x version) dashboard, it was **NOT** possible to show the volatile and the non-volatile data in a single dashboard. Meaning, the real-time data display was not possible directly. Now with the latest features of Cognos Analytics 11.x, custom widgets can be built to display volatile data and cusotm widgets can be used through Extensions in Cognos Dashboards.
 
-One of the key challenging task in the Automobile manufacturing unit is to monitor the devices and taking an accurate decision of bringing them for planned or un-planned maintenance. From the traditional Cognos analytics (previous to CA11.1) dashboard, it was `NOT` possible to show the Volatile and the non-volatile data in a single dashboard. Meaning, the real-time data display wan not possible directly. Now with the latest features of CA11.x, Custom widgets can be built and through Extensions we can use them in Cognos Dashboards.
+With the latest feature of Cognos Analytics 11.x Extensions, we have the ability to add and remove elements in the IBM Cognos Analytics user interface for a perspective. An extension is a zip file that contains spec.json, optional images and js folders. You can create extensions that add functions to the IBM Cognos Analytics user interface. 
 
-With the latest feature of Cognos 11.x Extensions, you now have the ability to add and remove elements in the IBM Cognos Analytics user interface for a perspective. An extension is a zip file that contains spec.json and optional images and js folders. You can create extensions that add functions to the IBM® Cognos® Analytics user interface. For example, you can add buttons that, when clicked, open a particular report or dashboard. You can also remove default buttons from the user interface.
+In Automobile manufacturing unit, a plant engineer's job is to continuously monitor the devices health and keep them intact. It is quiet a tedious job for him to monitor constantly those devices and take a call to bring the devices down for maintenance. When there is a corrective maintencance task, where equipment is repaired or replaced after wear, malfunction or break down, at that moment going for maintenance is a fair ask. But, if there is preventive/predictive maintenance required based on the previous break down activities, the system/models would have predicted for device to bring down for maintenance. However if you really look at the live (real-time) metrics of the devices, he would notice that devices health is absolutely fine and intact and the plant engineer would not go for a unnecessarry (overhead) maintenance. In order to see such live/real-time metrics from the Cognos dashboard, it is not a straight way to build. This code pattern helps you to achieve that.
 
-Considering the use case of a Automobile manufacturing units, a plant engineer's job is to continuolsy monitor the devices health and keep them in tact. It is quiet a tedious job for him to monitor constantly those devices and take a call to bring the devices down for maintenance. At times there may be scenario where there might be a false alarms of bringing the devices down for maintenance based on the system/model predictions.
-
-For example: When there is a corrective maintenance task, where equipment is repaired or replaced after wear, malfunction or break down. At that moment going for maintenance is fair ask. But, imagine if there is Preventive/Predictive maintenance (where equipment or facilities are inspected, maintained and protected before break down or other problems occur) required based on the previous break down activities, the system/models would have predicted for device to bring down for maintenance, however if you really look at the live (real-time) metrics of the devices, he would notice that devices health is absolutely fine and intact and the plant engineer would not go for a unnecessarry (overhead) maintenance. In order to see such live/real-time metrics from the Cognos dashboard, it is not a straight way to build.
-
-In this Code Pattern, we will build a Cognos add-on to consume highly volatile streaming data, a dancing dashboard. 
-The real time Dashboard will be able to display mix of data (volatile and non-volatile) can be shown on a single dashboard. Volatile data is extracted from external websites and in other words we are trying to build a Cognos add-on to consume streaming (Highly volatile) data like stock ticker or data from SCADA or IOT platform broadcast data. 
-The idea is to build a dancing chart that captures volatile data and incrementally updates itself.
-
-In simple words, this pattern will demonstrate displaying live-insights of the devices health metrics from Cognos Dashnoard.
+In this code pattern, we build a Cognos add-on to consume highly volatile streaming (real-time) data. The real time Dashboard displays mix of data (volatile and non-volatile) on a single dashboard. It shows a dancing chart that captures volatile data and incrementally updates itself. This pattern demonstrates displaying live-insights of the devices health metrics from Cognos Dashboard.
 
 When the reader has completed this Code Pattern, they will understand how to:
 
@@ -28,7 +20,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 
 ![CDB_Cognos](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/DD_Flow.jpg)
 
-1. Develop the code (includes spec.json, js, css, Images) to build Cognos Custom Widget (Extensions)
+1. Develop the code (includes spec.json, js, css, Images) to build Cognos Custom Widget (Extensions).
 2. Bundle the code as a zip file.
 3. Upload the zipped files into Cognos using Extensions.
 4. Use the built custom widget into Cognos Dashboard.
@@ -45,7 +37,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 * Cognos server - Have on-prim or SaaS offering of Cognos.
    > Note: Cognos version should be over 11.0.1.
 
-* To create and upload extensions (Custom Widgets), you must have Cognos Portal Administrator or System Administrator privileges.
+* To create and upload extensions(Custom Widgets), you must have Cognos Portal Administrator or System Administrator privileges.
    
 
 # Steps
@@ -64,46 +56,44 @@ When the reader has completed this Code Pattern, they will understand how to:
    git clone https://github.com/IBM/cognos-dancing-dashboard.git
    ```
    
- - In this repository, custom widget code is available at `./custom-widget-code`. Dowload the `CognosCustomWidget.zip` to your machine.
+ - In this repository, custom widget code is available at `./custom-widget-code`.
  
- -  The contents of zip file are as follows and we are providing as zip file (or bundled) to upload to Cognos as Custom widgets.
+ -  Custom widget code is provided as zip file (bundled) to upload to Cognos as Custom widgets.The contents of zip file are as follows:
+  
+   ![Download_Code_Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/code.jpg)
  
- ![Download_Code_Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/code.jpg)
- 
-
 
 ## 2. Upload the zipped files into Cognos using Custom Widgets
 
 
 - Launch Cognos BI server from the browser (Firefox is preferred). Use the url as per your Cognos Instance. 
 
-Sample URL as follows: 
-```
-http://IP(or)localhost:port_number/bi/?perspective=home
-```
+  Sample URL as follows: 
+   ```
+   http://IP(or)localhost:port_number/bi/?perspective=home
+   ```
 
-![LaunchCognos](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/LaunchCognos.jpg)
+  ![LaunchCognos](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/LaunchCognos.jpg)
 
 
 - Under Cognos BI web browser, go to the `Manage -> Customization` option. See below screenshot for details.
 
-![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/upload_BI.jpg)
+  ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/upload_BI.jpg)
 
 
--  Under Customization, use the `Extensions` tab and click on upload icon to upload the `CognosCustomWidget.zip` file. See below screenshot for details.
+-  Under Customization, use the `Extensions` tab and click on `upload` icon to upload the `CognosCustomWidget.zip` file. CognosCustomWidget.zip file is the part of your [git code](https://github.com/IBM/cognos-dancing-dashboard/tree/master/custom-widget-code). See below screenshot for details.
 
-![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/uploadBI1.jpg)
+   ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/uploadBI1.jpg)
 
 
 - On success, `File was uploaded successfully` message will be displayed.
 
-![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/upload_Success.jpg)
+  ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/upload_Success.jpg)
 
 
-- A new icon gets created for this newly created Custom Widget on successful upload of the Custom Widget zip file. 
-See below screen shot for details.
+- The code provided in this reposiory creates a custom widget for use in dashboards. Hence, a new icon gets created for this newly created Custom Widget on successful upload of the Custom Widget zip file as shown in screenshot. 
 
-![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/cw_icon.jpg)
+  ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/cw_icon.jpg)
 
 
 
@@ -111,73 +101,72 @@ See below screen shot for details.
 
 - Launch Cognos and create a new dashboard
 
-![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/db1.jpg)
+  ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/db1.jpg)
 
 
 - Select the blank template.
 
-![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/db2.jpg)
+  ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/db2.jpg)
 
 
 - Click on the Newly created Custom Widget Icon.
 
-![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/cw1.jpg)
+  ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/cw1.jpg)
 
 
 - Drag and drop the Custom Widget to the Dashboard pane. See below screenshot for details.
 
-![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/cw2.jpg)
+  ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/cw2.jpg)
 
 
 - Adjust the dragged Custom widget to fit to the required height and width within the dashboard.
 
-![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/Adjust_Size.jpg)
+  ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/Adjust_Size.jpg)
 
 
 - After adjusting the custom widget would look like below.
 
-![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/Adjust_Size1.jpg)
+  ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/Adjust_Size1.jpg)
 
 
 - Save the dashboard as 
 
-```
-`Live Streaming of Device` under `My Content` of Cognos Connection.
-```
+  ```
+  `Live Streaming of Devices` under `My Content` of Cognos Connection.
+  ```
 
-![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/Save_Dashboard.jpg)
+  ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/Save_Dashboard.jpg)
 
 
 ## 4. Run the Dashboard
 
-- Run the 'Live Streaming of Device' dashboard from the saved location.
+- Run the 'Live Streaming of Devices' dashboard from the saved location.
  
- ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/RunDashboard.jpg)
+  ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/RunDashboard.jpg)
 
 - You will see the dashboard with a list content which has 'DeviceA' last 24 hours data (Pressure, Temperature and Vibration)
 
- ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/Dashboard1.jpg)
+  ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/Dashboard1.jpg)
  
 - Click on any attribute (Pressure/Temperature/Vibration) column for live streaming. A pop up will appear to confirm the pressure live chart is going to be displayed. 
  
- ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/Popup.jpg)
+  ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/Popup.jpg)
  
--  See the below Live streaming of the line chart for pressure. 
+-  See the below Live streaming of the line chart for pressure attribute. 
 
- ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/Pressure.jpg)
+   ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/Pressure.jpg)
  
 - Similarly we can click on other metrics like Temperature and Vibration to see the live streaming of the data in the line chart.
 
- ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/Temperature.jpg)
+  ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/Temperature.jpg)
  
  ## 5. Analyze the Dashboard
  
- The dashboard displays both volatile and non-volatile data. Meaning, the static data is being read from the JSON specification (can also be read from any traditional database but for this pattern we restricted to read from json spec) and the real-time data is being read from the json spec through a random number generator (ideally can be read from IoT device data through REST API's). Here we are generating the live (real-time) data using the Random function from java script. This dashboard is primarily useful for automobile manufacturing unit plant engineer who would want to monitor the devices at real-time. For example, if any of these metrics or combinations of the metrics (Pressure/Temperatur/Vibration) go beyond the threshold points, then the plant engineer would take a call to bring devices down for maintenance. 
+The dashboard displays both volatile and non-volatile data. Meaning, the static data is being read from the json spec (can also be read from any traditional database but for this pattern we restricted to read from json spec) and the real-time data is being read from the json spec through a random number generator (which can be read from IoT device data through REST APIs). This dashboard is primarily useful for automobile manufacturing unit plant engineer who would want to monitor the devices at real-time. For example, if any of these metrics or combinations of the metrics (Pressure/Temperature/Vibration) go beyond the threshold points, then the plant engineer would take a call to bring devices down for maintenance. 
  
+### Sample output
 
-# Sample output
-
-![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images//Sample_Output.jpg)
+ ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images//Sample_Output.jpg)
 
 <!--Optionally, include any troubleshooting tips (driver issues, etc)-->
 
@@ -185,7 +174,7 @@ See below screen shot for details.
 
 * Error: Invalid File Name. (This error occurs while you are trying to upload the Custom widget Extension under Customization)
 
- ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/error1.png)
+  ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/error1.png)
 
   > This is common error if the files are not bundled appropriately.
   
@@ -201,4 +190,3 @@ See below screen shot for details.
 ## License
 
 [Apache 2.0](LICENSE)
-
