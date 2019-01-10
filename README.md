@@ -159,10 +159,21 @@ When the reader has completed this Code Pattern, they will understand how to:
 - Similarly we can click on other metrics like Temperature and Vibration to see the live streaming of the data in the line chart.
 
   ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/Temperature.jpg)
+  
+- Following are the optional steps to customize the dashboard.
+```
+* Add back ground color the dashboard
+* Add a title to the dashboard
+* Add mutliple tabs to the dashboard
+```
+
+![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/sample_output_DD.png)
  
  ## 5. Analyze the Dashboard
  
 The dashboard displays both volatile and non-volatile data. Meaning, the static data is being read from the json spec (can also be read from any traditional database but for this pattern we restricted to read from json spec) and the real-time data is being read from the json spec through a random number generator (which can be read from IoT device data through REST APIs). This dashboard is primarily useful for Automobiles, manufacturing unit's plant engineer who would want to monitor the devices at real-time. For example, if any of these metrics or combinations of the metrics (Pressure/Temperature/Vibration) go beyond the threshold points, then the plant engineer would take a call to bring devices down for maintenance. 
+
+
  
 ### Sample output
 
