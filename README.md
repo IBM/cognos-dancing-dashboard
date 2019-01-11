@@ -91,7 +91,7 @@ When the reader has completed this Code Pattern, they will understand how to:
   ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/upload_Success.jpg)
 
 
-- The code provided in this reposiory creates a custom widget for use in dashboards. Hence, a new icon gets created for this newly created Custom Widget on successful upload of the Custom Widget zip file as shown in screenshot. 
+- The code provided in this repository creates a custom widget for use in dashboards. Hence, a new icon gets created for this newly created Custom Widget on successful upload of the Custom Widget zip file as shown in screenshot. This you can verify later as it appears in the dashboard console.
 
   ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/cw_icon.jpg)
 
@@ -132,10 +132,15 @@ When the reader has completed this Code Pattern, they will understand how to:
 - Save the dashboard as 
 
   ```
-  `Live Streaming of Devices` under `My Content` of Cognos Connection.
+  `Live Streaming of Devices` under `My Content` or any folder of your choice.
   ```
 
   ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/Save_Dashboard.jpg)
+  
+- Close the dashboard
+
+![](images/closedb.png)
+
 
 
 ## 4. Run the Dashboard
@@ -148,7 +153,7 @@ When the reader has completed this Code Pattern, they will understand how to:
 
   ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/Dashboard1.jpg)
  
-- Click on any attribute (Pressure/Temperature/Vibration) column for live streaming. A pop up will appear to confirm the pressure live chart is going to be displayed. 
+- Click on any attribute (Pressure/Temperature/Vibration) column cell for live streaming. A pop up will appear to confirm the pressure live chart is going to be displayed. 
  
   ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/Popup.jpg)
  
