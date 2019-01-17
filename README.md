@@ -30,7 +30,8 @@ When the reader has completed this Code Pattern, they will understand how to:
 <!--Optionally, update this section when the video is created-->
 # Watch the Video
 
-[![](http://img.youtube.com/vi/Jxi7U7VOMYg/0.jpg)](https://www.youtube.com/watch?v=Jxi7U7VOMYg)
+[![](http://img.youtube.com/vi/234fz-UwPKY/0.jpg)](https://youtu.be/234fz-UwPKY)]
+<!--[![](http://img.youtube.com/vi/Jxi7U7VOMYg/0.jpg)](https://www.youtube.com/watch?v=Jxi7U7VOMYg)-->
 
 ## Pre-requisites
 
