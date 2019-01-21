@@ -29,7 +29,7 @@ Real-time (or) Live streaming of Automotive device's data using Custom Widgets w
 
 * Demo URL
 
-[![](http://img.youtube.com/vi/234fz-UwPKY/0.jpg)](https://youtu.be/234fz-UwPKY)]
+[![](http://img.youtube.com/vi/234fz-UwPKY/0.jpg)](https://youtu.be/234fz-UwPKY)
 
 # Summary
 
