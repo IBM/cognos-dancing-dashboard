@@ -168,13 +168,13 @@ When the reader has completed this Code Pattern, they will understand how to:
   ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/Temperature.jpg)
   
 - Following are the optional steps to customize the dashboard.
-```
-* Add back ground color the dashboard
-* Add a title to the dashboard
-* Add mutliple tabs to the dashboard
-```
+  ```
+  * Add back ground color the dashboard
+  * Add a title to the dashboard
+  * Add mutliple tabs to the dashboard
+  ```
 
-![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/sample_output_DD.png)
+  ![Img](https://github.com/IBM/cognos-dancing-dashboard/blob/master/images/sample_output_DD.png)
  
  ## 5. Analyze the Dashboard
  
