@@ -6,7 +6,7 @@ Cognos Dancing Dashboard
 
 # Long Title
 
-Real-time (or) Live streaming of Automotive device's data using Custom Widgets within Cognos Dashboard
+Real-time streaming of Automotive device's data using Custom Widgets within Cognos Dashboard
 
 
 
