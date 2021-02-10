@@ -1,5 +1,7 @@
 
-# Live streaming of devices/sensor data using custom widgets within Cognos dashboard
+# Display live insights of your device’s health metrics
+
+### Real-time streaming of automotive device data using custom widgets
 
 IBM Cognos Analytics integrates reporting, modeling, analysis, dashboards, stories, and event management so that you can understand your organization data, and make effective business decisions. Just take an example in the Automobile manufacturing unit, one of the key challenging tasks is to monitor the devices and taking an accurate decision of bringing them for planned or un-planned maintenance. From the traditional Cognos analytics (previous to 11.x version) dashboard, it was **NOT** possible to show the volatility and the non-volatile data in a single dashboard. Meaning, the real-time data display was not possible directly. Now with the latest features of Cognos Analytics 11.x, custom widgets can be built to display volatile data and custom widgets can be used through Extensions in Cognos Dashboards.
 
